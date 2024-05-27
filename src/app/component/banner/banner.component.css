@@ -1,0 +1,25 @@
+.parent {
+  position: relative;
+}
+
+.icon-left {
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #EAEAEA;
+  border-radius: 30px;
+  color: #292D32;
+}
+
+.icon-right {
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #EAEAEA;
+  border-radius: 30px;
+  color: #292D32;
+}
