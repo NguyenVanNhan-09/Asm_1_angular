@@ -1,0 +1,15 @@
+.event_hover:hover .event_move {
+  width: 100%;
+}
+
+.event_hover:hover .remove {
+  display: none;
+  transition: .3s ease;
+}
+
+.event_move {
+  width: 0;
+  overflow: hidden;
+  transition: .3s ease;
+  white-space: nowrap;
+}

@@ -1,0 +1,180 @@
+{
+  "products": [
+    {
+      "title": "MLB - Giày sneakers",
+      "price": "1022",
+      "image": "https://product.hstatic.net/200000642007/product/43bgd_3ashcdm2n_3_fe859353e1304b79b00c675b61f2ffb2_8d86ed55b6094cafa9d4cc9b85b471c7_master.jpg",
+      "description": "MLB - Giày sneakers unisex cổ thấp Bigball Chunky Monogram New York Yankees",
+      "category": "2",
+      "id": "Yn-lYxz"
+    },
+    {
+      "title": "Chunky Liner",
+      "price": 12313,
+      "image": "https://product.hstatic.net/200000642007/product/50nyd_3asxcdn3n_1_bfb9573b020641e48bef0d866de81000_6eaa78a51abc497cbcf600ee23711d1f_master.jpg",
+      "description": "MLB - Giày sneakers unisex cổ thấp Chunky Liner Mid Denim",
+      "category": "2",
+      "id": "e1FTGEG"
+    },
+    {
+      "title": "Nike Dunk High black",
+      "price": 100,
+      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5e7687f1-c13e-4bac-8ffa-a6f863ae9157/dunk-high-retro-shoe-DdRmMZ.png",
+      "description": "Find the Nike Dunk High Retro at Nike.com",
+      "category": "1",
+      "id": "x7LUy-4"
+    },
+    {
+      "title": "Nike Dunk High blue",
+      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png",
+      "price": 100,
+      "description": "Nike Dunk High By You Custom Men's Shoes",
+      "category": "1",
+      "id": "klpnr2K"
+    },
+    {
+      "title": "Yz 350 white",
+      "image": "https://cf.shopee.vn/file/e10f13f7e82d32361fff1ae479b1c1f0",
+      "price": 100,
+      "description": "Tổng hợp Giày Nam Yz 350 giá rẻ, bán chạy tháng 6/2024 - Mua Thông Minh",
+      "category": "3",
+      "id": "gm-h7AT"
+    },
+    {
+      "title": "Yz 350 black",
+      "image": "https://cf.shopee.vn/file/a144522f9b78cfa60acedc2c81a89241",
+      "price": 100,
+      "description": "Tổng hợp Giày Thể Thao Yz 350 giá rẻ, bán chạy tháng 4/2024 - Mua Thông Minh",
+      "category": "3",
+      "id": "dqw"
+    },
+    {
+      "title": "RSX Efekt Gradient",
+      "image": "https://product.hstatic.net/1000284478/product/03_391171_1_a6f77c7f325c45969898ffa4ae73438c_master.jpg",
+      "price": 100,
+      "description": "PUMA - Giày sneakers unisex cổ thấp RSX Efekt Gradient",
+      "category": "4",
+      "id": "dqw"
+    },
+    {
+      "title": "Creeper Rihanna",
+      "image": "https://sneakerhs.com/wp-content/uploads/2019/10/Giay-Puma-Creeper-Rihanna-Fenty-Leather-White-puma-trang-vach-den-rep-11-gia-re-ha-noi-5-1.jpg",
+      "price": 100,
+      "description": "Giày Puma Creeper Rihanna Fenty Leather White Trắng Vạch đen - H&S",
+      "category": "4",
+      "id": "acbr-v"
+    },
+    {
+      "title": "adidas Giày Chạy Bộ Xám",
+      "image": "https://assets.adidas.com/images/w_600,f_auto,q_auto/2c7a3235fb2f40589378ee789cc83343_9366/Giay_Chay_Bo_Thap_Nien_80_Xam_ID1882_01_standard.jpg",
+      "price": 100,
+      "description": "adidas Giày Chạy Bộ Thập Niên 80 - Xám | adidas Vietnam",
+      "category": "5",
+      "id": "aur-av"
+    },
+    {
+      "title": "dqwdwqd",
+      "image": "dqwdqwd",
+      "price": 100,
+      "description": "nhan",
+      "category": "2",
+      "id": "hzuZplf"
+    }
+  ],
+  "categorys": [
+    {
+      "name": "nike",
+      "id": 1
+    },
+    {
+      "name": "mlb",
+      "id": 2
+    },
+    {
+      "name": "yz",
+      "id": 3
+    },
+    {
+      "name": "Puma",
+      "id": 4
+    },
+    {
+      "name": "Adidas",
+      "id": 5
+    }
+  ],
+  "students": [
+    {
+      "name": "qưdqwdqw",
+      "age": 18,
+      "address": "dqdqwdqw",
+      "classname": "qưdqwdqw",
+      "id": 19
+    },
+    {
+      "name": "qưdqwqwd777",
+      "age": 18,
+      "address": "dqwdqwd",
+      "classname": "qưdqwdqdq",
+      "id": 20
+    },
+    {
+      "name": "ưqdqwdqw",
+      "age": 18,
+      "address": "dqwdqw",
+      "classname": "dqwdqw",
+      "id": 21
+    },
+    {
+      "name": "Nguyễn Văn Nhân",
+      "age": 18,
+      "address": "Hà nội ",
+      "classname": "WD18337",
+      "id": 22
+    }
+  ],
+  "users": [
+    {
+      "email": "angocit@gmail.com",
+      "password": "$2a$10$8u/MIGjWjBrq40iHGmXgqes1Cf7m6a1smHqFwv5CA.fRqqJ1ZtqMu",
+      "name": "sàdsafads",
+      "id": 1
+    },
+    {
+      "email": "angocit2@gmail.com",
+      "password": "$2a$10$O9OzPG/n7lzXYbRx40HDx.1P2W1yLy5RjAS5qROzOhjFh8v8mJ2hm",
+      "name": "sdafjaskdfj",
+      "id": 2
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$gHXVrdgvu3zGsjlQJD0xOu0/cT.s2e0zuCBNYMm5dqxZ/We0cm5d6",
+      "name": "nhan",
+      "id": 3
+    },
+    {
+      "email": "Nhan@gmail.com",
+      "password": "$2a$10$J3J6ZjHM0tKckXl.BVPaU./6IW/dOu4Ra18Fm4mgPBcTiA07cDO.m",
+      "name": "qưdqwdqw",
+      "id": 4
+    },
+    {
+      "email": "thuy@gmail.com",
+      "password": "$2a$10$VvPDly0InzR4DmcXdV4iI.DqYIQqYFkMHZWNhOunQvWH4edNXv/Wy",
+      "name": "Thủy",
+      "id": 5
+    },
+    {
+      "email": "thuy2@gmail.com",
+      "password": "$2a$10$masvUxbeaj9hSGuzLTCwM.pW8yMxc6A3.udDUbHbTU8uiA1iNsvui",
+      "name": "Thủy",
+      "id": 6
+    },
+    {
+      "email": "user@gmail.com",
+      "password": "$2a$10$5JqXYsTwtHIjubyCxh0HjeuliYYHTfwOKuqPbeT4mWQAMXBAs0xIO",
+      "name": "nhan",
+      "id": 7
+    }
+  ]
+}

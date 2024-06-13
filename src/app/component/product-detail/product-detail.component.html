@@ -2,27 +2,27 @@
   <div class="grid items-start grid-cols-1 lg:grid-cols-2 gap-10">
     <div class="space-y-4 text-center lg:sticky top-8">
       <div class="bg-gray-100 p-4 flex items-center sm:h-[380px] rounded">
-        <img src="{{product.image}}" alt="Product" class="w-full max-h-full object-contain object-top" />
+        <img src="{{productDetail.image}}" alt="productDetail" class="w-full max-h-full object-contain object-top" />
       </div>
 
       <div class="grid grid-cols-2 gap-4">
         <div class="bg-gray-100 p-4 flex items-center rounded sm:h-[182px]">
-          <img src="{{product.image}}" alt="Product" class="w-full max-h-full object-contain object-top" />
+          <img src="{{productDetail.image}}" alt="productDetail" class="w-full max-h-full object-contain object-top" />
         </div>
 
         <div class="bg-gray-100 p-4 flex items-center rounded sm:h-[182px]">
-          <img src="{{product.image}}" alt="Product" class="w-full max-h-full object-contain object-top" />
+          <img src="{{productDetail.image}}" alt="productDetail" class="w-full max-h-full object-contain object-top" />
         </div>
       </div>
     </div>
 
     <div class="max-w-xl">
       <div>
-        <h2 class="text-2xl font-extrabold text-gray-800">{{product.title}}</h2>
+        <h2 class="text-2xl font-extrabold text-gray-800">{{productDetail.title}}</h2>
       </div>
 
       <div class="mt-4">
-        <h3 class="text-gray-800 text-3xl font-bold">${{product.price}}</h3>
+        <h3 class="text-gray-800 text-3xl font-bold">${{productDetail.price}}</h3>
       </div>
 
       <div class="flex space-x-1 mt-4">
@@ -59,7 +59,8 @@
         </h1>
       </div>
       <div class="flex space-x-1 mt-4">
-        <p class="text-[15px] pb-3 text-[#5D5D5D] border-b w-full border-[#BDBDBD]">Hurry up! only 34 product left in
+        <p class="text-[15px] pb-3 text-[#5D5D5D] border-b w-full border-[#BDBDBD]">Hurry up! only 34 productDetail left
+          in
           stock!
         </p>
       </div>
@@ -120,7 +121,7 @@
       </div>
       <!-- Button -->
       <div class="flex flex-wrap gap-4 mt-8 border-b w-full border-[#BDBDBD] pb-4">
-        <a href="cart/{{product.id}}" type="button"
+        <a href="client/cart/{{productDetail.id}}" type="button"
           class="min-w-[200px] flex justify-center px-4 py-3 hover:opacity-45 text-white text-sm font-semibold  bg-[#EDA415] rounded-[20px]">Buy
           now</a>
         <a href="" type="button"
@@ -156,5 +157,69 @@
     <h2 class="text-[#003F62] text-[22px] font-bold">Customer reviews</h2>
     <p class="text-[#4F4F4F] text-[18px] mt-3 mb-3">No reviews yet</p>
     <div class="text-white text-[18px] bg-[#003F62] px-2 py-1">Write a review</div>
+  </div>
+</div>
+
+<div class="ml-[110px] mr-[110px] mb-[100px]">
+  <h2 class="text-[#003F62] text-[22px] font-bold mb-6">Related product</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-xl:gap-4 gap-6 mt-6">
+
+
+    @for (item of product; track $index) {
+    <a *ngIf="productDetail.category === item.category && productDetail.id != item.id"
+      href="client/product-detail/{{item.id}}"
+      class="border border-[#B6B6B6] shadow-md overflow-hidden rounded-[19.67px] cursor-pointer hover:-translate-y-2 transition-all relative event_hover min-h-[332px]">
+      <div
+        class="bg-[#87BCD9] w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-3 right-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18px" class="fill-gray-800 inline-block" viewBox="0 0 64 64">
+          <path
+            d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+            data-original="#000000"></path>
+        </svg>
+      </div>
+      <div class="w-11/12 h-[168.18px] p-4 overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4">
+        <img src="{{item.image}}" alt="Product 1" class="h-full w-[282.28px] min-h-[168.18px] object-contain" />
+      </div>
+      <div class="p-6  w-[100%] remove">
+        <h3 class="text-lg font-extrabold text-gray-800 whitespace-nowrap overflow-hidden text-ellipsis">
+          {{item.title}}</h3>
+        <h4 class="text-lg text-gray-800 font-bold mt-2">{{item.price}}</h4>
+
+        <div class="flex space-x-2 mt-6">
+          <svg class="w-5 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+          </svg>
+          <svg class="w-5 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+          </svg>
+          <svg class="w-5 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+          </svg>
+          <svg class="w-5 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+          </svg>
+          <svg class="w-5 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+          </svg>
+        </div>
+      </div>
+      <div class="absolute bottom-[10%] flex justify-between w-full mb-4 event_move">
+        <div
+          class="border border-[#87BCD9] rounded-[19px] flex flex-1 items-center justify-around ml-4 mr-4 w-[204.58px] h-[60px] bg-[#87BCD9]">
+          <p class="text-[19px]">add to cart</p>
+          <i class="ti-shopping-cart text-[15.5px] bg-[#EDA415] px-2 py-2 rounded-full text-white"></i>
+        </div>
+        <div
+          class="border border-[#87BCD9] rounded-[19px] w-[70.81px] h-[60px] flex items-center justify-center mr-4 bg-[#87BCD9]">
+          <i class="ti-eye text-[23px]"></i>
+        </div>
+      </div>
+    </a>
+    }
   </div>
 </div>

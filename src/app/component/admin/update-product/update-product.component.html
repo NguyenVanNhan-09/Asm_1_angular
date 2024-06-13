@@ -1,0 +1,47 @@
+<div class="bg-slate-100 h-[100vh]">
+  <h1
+    class="text-center  mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black">
+    Update Product</h1>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="max-w-sm mx-auto">
+    <div class="mb-5">
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Title</label>
+      <input type="text" formControlName="title"
+        class="shadow-sm bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" />
+      <span class="text-red-700"
+        *ngIf="!productForm.controls.title.valid&&(productForm.controls.title.dirty||productForm.controls.title.touched)">
+        Title cannot be blank & >6 characters
+      </span>
+    </div>
+    <div class="mb-5">
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">price</label>
+      <input type="number" id="password" formControlName="price"
+        class="shadow-sm bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" />
+      <span class="text-red-700"
+        *ngIf="!productForm.controls.price.valid&&(productForm.controls.price.dirty||productForm.controls.price.touched)">
+        price > 100 </span>
+    </div>
+    <div class="mb-5">
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">description</label>
+      <input type="text" id="repeat-password" formControlName="description"
+        class="shadow-sm bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" />
+      <span class="text-red-700"
+        *ngIf="!productForm.controls.description.valid&&(productForm.controls.description.dirty||productForm.controls.description.touched)">
+        Description cannot be left blank </span>
+    </div>
+
+    <div class="mb-5 flex items-center">
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Category</label>
+      <select name="" id="" formControlName="category">
+        @for (item of category; track $index) {
+        <option value="{{item.id}}">{{item.name}}</option>
+        }
+      </select>
+      <span class="text-red-700"
+        *ngIf="!productForm.controls.category.valid&&(productForm.controls.category.dirty||productForm.controls.category.touched)">
+        category cannot be left blank </span>
+    </div>
+
+    <button type="submit" [disabled]="!productForm.valid" class="kForm.valid"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  </form>
+</div>

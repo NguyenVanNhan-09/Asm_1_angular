@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TProduct } from '../../../interface/product';
 import axios from 'axios';
-// import { inject } from '@angular/core/testing';
+import { ProductService } from '../../product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,18 +10,26 @@ import axios from 'axios';
   styleUrl: './product-detail.component.css',
 })
 export class ProductDetailComponent {
-  route = inject(ActivatedRoute);
-  product: TProduct = {} as TProduct;
-
-  // onClick = () => {
-  //   console.log(this.route.snapshot.params['slug']);
-  // };s
+  productDetail: TProduct = {} as TProduct;
+  product: TProduct[] = [];
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService
+  ) {}
 
   async ngOnInit() {
-    const productId = this.route.snapshot.params['id'];
-    const { data } = await axios.get(
-      `https://fakestoreapi.com/products/${productId}`
-    );
-    this.product = data;
+    this.productByDetail(), this.productByCategory();
   }
+  productByDetail = () => {
+    const productId = this.route.snapshot.params['id'];
+    this.productService.Get_Product_ById(productId).subscribe((data) => {
+      this.productDetail = data;
+    });
+  };
+  productByCategory = () => {
+    this.productService.Get_All_Product().subscribe((data) => {
+      console.log(data);
+      this.product = data;
+    });
+  };
 }

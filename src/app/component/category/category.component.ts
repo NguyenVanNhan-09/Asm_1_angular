@@ -1,7 +1,7 @@
+import { ProductService } from './../../product.service';
 import { Component } from '@angular/core';
 import { TProduct } from '../../../interface/product';
-import axios from 'axios';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -9,9 +9,17 @@ import axios from 'axios';
 })
 export class CategoryComponent {
   product: TProduct[] = [];
+  constructor(
+    private productService: ProductService,
+    private route: ActivatedRoute
+  ) {}
 
   async ngOnInit() {
-    const { data } = await axios.get('https://fakestoreapi.com/products');
-    this.product = data;
+    const categoryId = this.route.snapshot.params['id'];
+    this.productService.Get_All_Product().subscribe((data) => {
+      this.product = data.filter((product: any) => {
+        return product.category === categoryId;
+      });
+    });
   }
 }

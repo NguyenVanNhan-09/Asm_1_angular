@@ -1,14 +1,14 @@
 export interface TProduct {
-  id: number;
+  id?: number | string;
   title: string;
   price: number;
   description: string;
-  category: string;
-  image: string;
-  rating: Rating;
+  category?: string;
+  image?: string;
+  rating?: Rating;
 }
 
 interface Rating {
-  rate: number;
-  count: number;
+  rate?: number;
+  count?: number;
 }

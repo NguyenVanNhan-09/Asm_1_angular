@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TProduct } from '../../../interface/product';
 import axios from 'axios';
+import { ProductService } from '../../product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,8 +10,11 @@ import axios from 'axios';
 })
 export class ProductListComponent {
   product: TProduct[] = [];
-  async ngOnInit() {
-    const { data } = await axios.get('https://fakestoreapi.com/products');
-    this.product = data;
+
+  constructor(private productService: ProductService) {}
+  ngOnInit() {
+    this.productService.Get_All_Product().subscribe((data) => {
+      this.product = data;
+    });
   }
 }
